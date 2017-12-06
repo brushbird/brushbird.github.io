@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Damer 的博客</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.damerwang.com/"/>
+  <updated>2017-12-05T09:21:34.861Z</updated>
+  <id>http://www.damerwang.com/</id>
+  
+  <author>
+    <name>Damer Wang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>trestle</title>
+    <link href="http://www.damerwang.com/2017/12/05/trestle/"/>
+    <id>http://www.damerwang.com/2017/12/05/trestle/</id>
+    <published>2017-12-05T09:20:30.000Z</published>
+    <updated>2017-12-05T09:21:34.861Z</updated>
+    
+    <content type="html"><![CDATA[<p>简单的测试</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;简单的测试&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
