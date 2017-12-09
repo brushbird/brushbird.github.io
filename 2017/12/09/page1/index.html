@@ -327,7 +327,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Damer-cli：帮你优化HTTP请求结构的脚手架"><span class="post-toc-number">1.</span> <span class="post-toc-text">Damer-cli：帮你优化HTTP请求结构的脚手架</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码结构就不展示了，大家可以去-这里-查看，本篇文章主要给大家分享一下其中的-api-和-store"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">代码结构就不展示了，大家可以去 这里 查看，本篇文章主要给大家分享一下其中的 api 和 store</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#api"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">api</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-urlConfig-js"><span class="post-toc-number">1.0.2.1.</span> <span class="post-toc-text">1. urlConfig.js</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注意："><span class="post-toc-number">1.0.2.2.</span> <span class="post-toc-text">==注意：==</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#这种方式的好处在于数据处理的操作全在vuex中进行，组件只负责渲染，代码逻辑都在一个地方，降低了别人熟悉你的代码的难度，同样也有利于维护"><span class="post-toc-number">1.0.2.2.1.</span> <span class="post-toc-text">这种方式的好处在于数据处理的操作全在vuex中进行，组件只负责渲染，代码逻辑都在一个地方，降低了别人熟悉你的代码的难度，同样也有利于维护</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#写在最后：-我目前的处理方式就是两者相结合，在api中注册所有的请求接口，对于不复杂的界面直接引用-api，复杂的组件就抽离出来，在store中处理。这是我最近工作的一点心得，把它写出来希望能为不知道的小伙伴提供一点帮助，知道这种方法的大神们，如果有更好的处理方式又方便分享的话，欢迎到-issues-中来。同样，如果这篇文章有什么问题的话也请移步-这里-。"><span class="post-toc-number">1.0.2.3.</span> <span class="post-toc-text">==写在最后：== 我目前的处理方式就是两者相结合，在api中注册所有的请求接口，对于不复杂的界面直接引用 api，复杂的组件就抽离出来，在store中处理。这是我最近工作的一点心得，把它写出来希望能为不知道的小伙伴提供一点帮助，知道这种方法的大神们，如果有更好的处理方式又方便分享的话，欢迎到 issues 中来。同样，如果这篇文章有什么问题的话也请移步 这里 。</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Damer-cli：帮你优化HTTP请求结构的脚手架"><span class="post-toc-number">1.</span> <span class="post-toc-text">Damer-cli：帮你优化HTTP请求结构的脚手架</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码结构就不展示了，大家可以去-这里-查看，本篇文章主要给大家分享一下其中的-api-和-store"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">代码结构就不展示了，大家可以去 这里 查看，本篇文章主要给大家分享一下其中的 api 和 store</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#api"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">api</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-urlConfig-js"><span class="post-toc-number">1.0.2.1.</span> <span class="post-toc-text">1. urlConfig.js</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-index-js"><span class="post-toc-number">1.0.2.2.</span> <span class="post-toc-text">2. index.js</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-引用"><span class="post-toc-number">1.0.2.3.</span> <span class="post-toc-text">3. 引用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#这种方式的好处在于统一管理HTTP请求，便于维护和修改，比如后台进行了修改接口地址或是增加删除参数之类的操作，我们就只要在-api-中进行修改就可以了。-同样，在多个页面用到同一个请求也只需要更改一下参数就可以了。"><span class="post-toc-number">1.0.2.3.1.</span> <span class="post-toc-text">这种方式的好处在于统一管理HTTP请求，便于维护和修改，比如后台进行了修改接口地址或是增加删除参数之类的操作，我们就只要在 api 中进行修改就可以了。 同样，在多个页面用到同一个请求也只需要更改一下参数就可以了。</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#store"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">store</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#使用"><span class="post-toc-number">1.0.3.0.1.</span> <span class="post-toc-text">使用</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注意："><span class="post-toc-number">1.0.3.1.</span> <span class="post-toc-text">==注意：==</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#这种方式的好处在于数据处理的操作全在vuex中进行，组件只负责渲染，代码逻辑都在一个地方，降低了别人熟悉你的代码的难度，同样也有利于维护"><span class="post-toc-number">1.0.3.1.1.</span> <span class="post-toc-text">这种方式的好处在于数据处理的操作全在vuex中进行，组件只负责渲染，代码逻辑都在一个地方，降低了别人熟悉你的代码的难度，同样也有利于维护</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#写在最后：-我目前的处理方式就是两者相结合，在api中注册所有的请求接口，对于不复杂的界面直接引用-api，复杂的组件就抽离出来，在store中处理。这是我最近工作的一点心得，把它写出来希望能为不知道的小伙伴提供一点帮助，知道这种方法的大神们，如果有更好的处理方式又方便分享的话，欢迎到-issues-中来。同样，如果这篇文章有什么问题的话也请移步-这里-。"><span class="post-toc-number">1.0.3.2.</span> <span class="post-toc-text">==写在最后：== 我目前的处理方式就是两者相结合，在api中注册所有的请求接口，对于不复杂的界面直接引用 api，复杂的组件就抽离出来，在store中处理。这是我最近工作的一点心得，把它写出来希望能为不知道的小伙伴提供一点帮助，知道这种方法的大神们，如果有更好的处理方式又方便分享的话，欢迎到 issues 中来。同样，如果这篇文章有什么问题的话也请移步 这里 。</span></a></li></ol></li></ol></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -470,18 +470,39 @@
 <h3 id="代码结构就不展示了，大家可以去-这里-查看，本篇文章主要给大家分享一下其中的-api-和-store"><a href="#代码结构就不展示了，大家可以去-这里-查看，本篇文章主要给大家分享一下其中的-api-和-store" class="headerlink" title="代码结构就不展示了，大家可以去 这里 查看，本篇文章主要给大家分享一下其中的 api 和 store"></a>代码结构就不展示了，大家可以去 <a href="https://github.com/brushbird/Damer-cli" target="_blank" rel="noopener">这里</a> 查看，本篇文章主要给大家分享一下其中的 api 和 store</h3><ul>
 <li><h3 id="api"><a href="#api" class="headerlink" title="api"></a>api</h3><h4 id="1-urlConfig-js"><a href="#1-urlConfig-js" class="headerlink" title="1. urlConfig.js"></a>1. urlConfig.js</h4></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// 在这个页面中，将后台的请求集合起来，统一管理</span><br><span class="line">(function() &#123;</span><br><span class="line">    var BASE_URL = window.oPageConfig.oData.BASE_URL;</span><br><span class="line"></span><br><span class="line">    function URLConfig(which, data) &#123;</span><br><span class="line">        var url;</span><br><span class="line">        switch (which) &#123;</span><br><span class="line">            /*********************基础信息*********************/</span><br><span class="line">            case &apos;baseInfo&apos;:</span><br><span class="line">                return BASE_URL + &apos;info&apos;; // 菜单列表</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    window.URLConfig = URLConfig;</span><br><span class="line">&#125;)();</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">#### 2. index.js</span><br></pre></td></tr></table></figure>
-<p>import http from ‘./http.js’;<br>import urlConfig from ‘./urlConfig.js’;<br>//在这里注册 HTTP请求<br>export function getBaseInfo (){<br>    return http({url: URLConfig(‘baseInfo’)});<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### 3. 引用</span><br></pre></td></tr></table></figure></p>
-<p>import * as Api from ‘api/index.js’</p>
+<p>`<br>// 在这个页面中，将后台的请求集合起来，统一管理<br>(function() {<br>    var BASE_URL = window.oPageConfig.oData.BASE_URL;</p>
+<pre><code>function URLConfig(which, data) {
+    var url;
+    switch (which) {
+        /*********************基础信息*********************/
+        case &apos;baseInfo&apos;:
+            return BASE_URL + &apos;info&apos;; // 菜单列表
+    }
+}
+window.URLConfig = URLConfig;
+</code></pre><p>})();<br>`</p>
+<h4 id="2-index-js"><a href="#2-index-js" class="headerlink" title="2. index.js"></a>2. index.js</h4><p><code>import http from &#39;./http.js&#39;;
+import urlConfig from &#39;./urlConfig.js&#39;;
+//在这里注册 HTTP请求
+export function getBaseInfo (){
+    return http({url: URLConfig(&#39;baseInfo&#39;)});
+}</code></p>
+<h4 id="3-引用"><a href="#3-引用" class="headerlink" title="3. 引用"></a>3. 引用</h4><p>`<br>import * as Api from ‘api/index.js’</p>
 <p>methods: {<br>  loadData: function() {<br>    Api.getBaseInfo().then((data)=&gt;{<br>        // todo<br>    }, error=&gt;{<br>        //todo<br>    })<br>  }<br>},</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### 这种方式的好处在于统一管理HTTP请求，便于维护和修改，比如后台进行了修改接口地址或是增加删除参数之类的操作，我们就只要在 api 中进行修改就可以了。 同样，在多个页面用到同一个请求也只需要更改一下参数就可以了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- ### store</span><br><span class="line">&gt; vuex的使用方法不用多说，这里主要是将公共方法抽取出来，放到actions中去，具体操作如下：</span><br></pre></td></tr></table></figure>
-<p>import testA from ‘./testA.js’;<br>import testB from ‘./testB.js’;<br>import * as Api from ‘src/api’;</p>
+<p>`</p>
+<h5 id="这种方式的好处在于统一管理HTTP请求，便于维护和修改，比如后台进行了修改接口地址或是增加删除参数之类的操作，我们就只要在-api-中进行修改就可以了。-同样，在多个页面用到同一个请求也只需要更改一下参数就可以了。"><a href="#这种方式的好处在于统一管理HTTP请求，便于维护和修改，比如后台进行了修改接口地址或是增加删除参数之类的操作，我们就只要在-api-中进行修改就可以了。-同样，在多个页面用到同一个请求也只需要更改一下参数就可以了。" class="headerlink" title="这种方式的好处在于统一管理HTTP请求，便于维护和修改，比如后台进行了修改接口地址或是增加删除参数之类的操作，我们就只要在 api 中进行修改就可以了。 同样，在多个页面用到同一个请求也只需要更改一下参数就可以了。"></a>这种方式的好处在于统一管理HTTP请求，便于维护和修改，比如后台进行了修改接口地址或是增加删除参数之类的操作，我们就只要在 api 中进行修改就可以了。 同样，在多个页面用到同一个请求也只需要更改一下参数就可以了。</h5><ul>
+<li><h3 id="store"><a href="#store" class="headerlink" title="store"></a>store</h3><blockquote>
+<p>vuex的使用方法不用多说，这里主要是将公共方法抽取出来，放到actions中去，具体操作如下： </p>
+</blockquote>
+</li>
+</ul>
+<p>`<br>import testA from ‘./testA.js’;<br>import testB from ‘./testB.js’;<br>import * as Api from ‘src/api’;</p>
 <p>const state = {};</p>
 <p>const getters = {};</p>
 <p>const actions = {<br>    //在这里将公共的操作提取出来，对公共的数据进行统一的操作<br>    //获取信息<br>    loadBaseInfo({ dispatch, commit }, params) {<br>        return new Promise((resolve, reject) =&gt; {<br>            Api.getBaseInfo(params).then(data =&gt; {<br>                commit(‘UPDATE_BASEINFO’, data.list);<br>                resolve(data);<br>            }, error =&gt; {<br>                reject(error);<br>            });<br>        })<br>    }<br>};</p>
 <p>const mutations = {<br>    UPDATE_BASEINFO(state, data) {<br>        //todo<br>    }<br>};</p>
-<p>export default {<br>    namespaced: true,<br>    state,<br>    getters,<br>    actions,<br>    mutations,<br>    modules: {<br>        testA,<br>        testB,<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">##### 使用</span><br></pre></td></tr></table></figure></p>
-<p>import { mapState, mapMutations, mapActions } from “vuex”;</p>
+<p>export default {<br>    namespaced: true,<br>    state,<br>    getters,<br>    actions,<br>    mutations,<br>    modules: {<br>        testA,<br>        testB,<br>    }<br>}<br>`</p>
+<h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><p>`<br>import { mapState, mapMutations, mapActions } from “vuex”;</p>
 <p>computed: {<br>    …mapState(“modules/testA”, {<br>      变量名: state =&gt; state.变量名,<br>    }),<br>    …mapState(“modules/testB”, {<br>      变量名: state =&gt; state.变量名,<br>    })<br>},<br>methods: {<br>    //注意这里的modules是指引用在index.js中的父组件的模块名称<br>    /<em>例如
     </em>在store/index.js中</p>
 <pre><code>*  &quot; import baseModule from &apos;./modules/base.js&apos;; &quot;
@@ -499,7 +520,7 @@
 ...mapMutations(&quot;modules/testB&quot;, [
   &quot;方法名&quot;
 ]),
-</code></pre><p>```</p>
+</code></pre><p>`</p>
 <h4 id="注意："><a href="#注意：" class="headerlink" title="==注意：=="></a>==注意：==</h4><blockquote>
 <p> 对于一个组件拥有多个组件，同时各组件之间有数据联系的情况，可以通过为每个组件都建立一个store文件，然后在父组件中引用的方式解决，当然，在子文件中都需要加上 ==namespaced: true== </p>
 </blockquote>
