@@ -12,7 +12,7 @@
     
     <title>
         
-            about me | 
+            译：Code Splitting with Vue.js And Webpack | 
         
         Damer 的博客
     </title>
@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Damer Wang">
     <meta name="description" itemprop="description" content="vue 前端学习 技术分享">
-    <meta name="keywords" content="vue 前端 api">
+    <meta name="keywords" content="vue 前端 api,vue webpack">
 
     <!-- Site Verification -->
     
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://www.damerwang.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="about me | Damer 的博客">
+    <meta property="og:title" content="译：Code Splitting with Vue.js And Webpack | Damer 的博客">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="vue 前端学习 技术分享">
-    
+    <meta property="og:article:tag" content="vue webpack"> 
 
+    
+        <meta property="article:published_time" content="12月 18, 2017" />
+        <meta property="article:modified_time" content="12月 18, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="about me | Damer 的博客">
+    <meta name="twitter:title" content="译：Code Splitting with Vue.js And Webpack | Damer 的博客">
     <meta name="twitter:description" content="vue 前端学习 技术分享">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,13 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://www.damerwang.com/about/index.html" />
+        <link rel="canonical" href="http://www.damerwang.com/2017/12/18/page2/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Damer 的博客",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Damer Wang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "生活不止眼前的苟且,还有未知的bug和看不懂的code"
+    },
+    "headline": "译：Code Splitting with Vue.js And Webpack",
+    "url": "http://www.damerwang.com/2017/12/18/page2/index.html",
+    "datePublished": "12月 18, 2017",
+    "dateModified": "12月 18, 2017",
+    "description": "vue 前端学习 技术分享",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://www.damerwang.com"
+    }
+}
+</script>
 
 
     
@@ -269,6 +302,43 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#异步组件"><span class="post-toc-number">1.</span> <span class="post-toc-text">异步组件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#动态模块加载"><span class="post-toc-number">2.</span> <span class="post-toc-text">动态模块加载</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#import"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">import()</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#动态组件加载"><span class="post-toc-number">3.</span> <span class="post-toc-text">动态组件加载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Code-Splitting-架构"><span class="post-toc-number">4.</span> <span class="post-toc-text">Code Splitting 架构</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
 
 <!-- Layouts -->
 
@@ -295,7 +365,7 @@
         
     
             <p class="article-headline-p">
-                about me
+                译：Code Splitting with Vue.js And Webpack
             </p>
         </div>
 
@@ -314,7 +384,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Damer Wang</strong>
-        <span>11月 30, 2017</span>
+        <span>12月 18, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -338,7 +408,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        
+        <a class="post_tag-link" href="/tags/vue-webpack/">vue webpack</a>
     </ul>
     
 
@@ -354,7 +424,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=about me&url=http://www.damerwang.com/about/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=译：Code Splitting with Vue.js And Webpack&url=http://www.damerwang.com/2017/12/18/page2/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -375,7 +445,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Damer 的博客&title=about me&summary=vue 前端学习 技术分享&pics=http://www.damerwang.com/img/favicon.png&url=http://www.damerwang.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Damer 的博客&title=译：Code Splitting with Vue.js And Webpack&summary=vue 前端学习 技术分享&pics=http://www.damerwang.com/img/favicon.png&url=http://www.damerwang.com/2017/12/18/page2/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -393,7 +463,117 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <div style="font-size:12px;border-bottom: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; BACKGROUND: #f6f6f6; HEIGHT: 120px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid"><br><div style="MARGIN-TOP: 10px; FLOAT: left; MARGIN-LEFT: 5px; MARGIN-RIGHT: 10px"><br><!-- <IMG alt="" src="https://avatars1.githubusercontent.com/u/168751?v=3&s=140" width=90 height=100> --><br></div><br><div style="LINE-HEIGHT: 200%; MARGIN-TOP: 10px; COLOR: #000000"><br><!-- 本文链接：<a href="<%= post.link %>"><%= post.title %></a> <br/> --><br>作者：<br><a href="http://www.damerwang.com">Damer Wang</a> <br>出处：<br><a href="http://www.damerwang.com">http://www.damerwang.com</a><br><br>本文基于<a target="_blank" title="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" href="http://creativecommons.org/licenses/by-sa/4.0/"> 知识共享署名-相同方式共享 4.0 </a><br>国际许可协议发布，欢迎转载，演绎或用于商业目的，但是必须保留本文的署名<br><a href="http://www.damerwang.com">Damer Wang</a>及链接。<br></div><br></div>
+        <p>&emsp;&emsp;用webpack来打包你的单页应用的一个可能的缺点是你可能会得到一个非常大的打包文件，有时甚至会有几兆大小。<br> Asset | Size<br>———|———:<br>bundle.main.js | 1.36MB<br>&emsp;&emsp;随之带来的问题是用户在屏幕上看到任何东西之前，必须要下载整个文件并运行它。如果用户使用的是网络连接不好的设备，这个过程可能需要很长时间。<br>&emsp;&emsp;<strong><em>Code splitting</em></strong> 就是把打包文件分割成为更小的文件，允许用户在他们需要的时候下载需要的代码块的一个方法。<br>&emsp;&emsp;例如，看看这个简单的界面，我们可以识别出这个App中不需要初始载入的部分。  </p>
+<p><img src="https://d33wubrfki0l68.cloudfront.net/f08875090748f1879db7b8783eef981e6bf2ea2d/0c121/images/posts/code_splitting_01.png" alt="image"><br>&emsp;&emsp;如果我们延迟加载这些代码段直到初始渲染结束会怎样？它可以让用户更快的看到界面并进行交互。<br>&emsp;&emsp;在这篇文章，我将向你展示如何使用<strong>Vue.js</strong> 和 <strong>Webpack</strong>将单页应用拆分成可以动态加载的更理想的大小。  </p>
+<h3 id="异步组件"><a href="#异步组件" class="headerlink" title="异步组件"></a>异步组件</h3><p>&emsp;&emsp;Code splitting 的关键就是异步组件（<em>async components</em>），这个组件的定义就是异步加载（包括它的模板，数据，方法等等）。<br>&emsp;&emsp;首先让我们用<em>component API</em> 即 <em>Vue.component(name, definition)</em> 声明一个组件。不同于将定义对象作为第二个参数，异步组件有一个函数，这个函数有两个显著的特点：</p>
+<ul>
+<li>它执行 Promise，拥有一个 resolve 参数</li>
+<li><p>它是一个工厂函数，也就是说它返回一个对象(在本例中是组件定义)<br><pre><code><br>Vue.component(‘async-component’, (resolve) =&gt; {<br>resolve({<br>  template: ‘<div>Async Component</div>‘,<br>  props: [ ‘myprop’ ]<br>});<br>});<br></code></pre><br>异步组件是 <em>Code splitting</em> 的第一步，因为我们现在才有了一个抽象的机制。  </p>
+<h3 id="动态模块加载"><a href="#动态模块加载" class="headerlink" title="动态模块加载"></a>动态模块加载</h3><p>&emsp;&emsp;我们还需要 <em>webpack</em> 的帮助，假设我们将组件定义抽象为ES6模块文件:  </p>
+<p><strong>AsyncComponent.js</strong><br><pre><code><br>export default {<br>template: ‘<div>Async Component</div>‘,<br>props: [ ‘myprop’ ]<br>}<br></code></pre><br>&emsp;&emsp;我们怎么让Vue.js加载它呢？你可能会想试试这样的方法：<br><pre><code><br>import AsyncComponent from ‘./AsyncComponent.js’`;<br>Vue.component(‘async-component’, AsyncComponent);<br></code></pre><br>&emsp;&emsp;但是这是静态的并且在编译时解析，如果我们想要获得<em>Code splitting</em> 的好处，我们需要的是在运行的应用中动态地加载。</p>
+<h4 id="import"><a href="#import" class="headerlink" title="import()"></a>import()</h4><p>&emsp;&emsp;目前，用JavaScript来动态的加载模块是不可能的。但是，ECMAScript有一个动态模块加载函数叫做 <em>import()</em>  。<br>&emsp;&emsp;Webpack已经有了一个import()的实现，并将其作为一个代码分割点，在创建包时，将所请求的模块放入一个单独的文件中（一个单独的chunk，实际上，现在把它看作单独的一个文件）。<br>&emsp;&emsp;import() 将文件名作为一个参数并返回一个Promise。下面是我们如何加载上面的模块：<br><pre><code><br>import(/<em> webpackChunkName: “async-component” </em>/ ‘./AsyncComponent.js’)<br>.then((AsyncComponent) =&gt; {<br>  console.log(AsyncComponent.default.template);<br>  // Output: <div>Async Component</div><br>});<br></code></pre></p>
+<blockquote>
+<p><strong><em>注：如果你使用Babel，你需要添加</em></strong> <em>syntax-dynamic-import</em> 插件<strong><em>以便Babel可以正确的解析。</em></strong></p>
+</blockquote>
+</li>
+</ul>
+<p>现在，但你构建项目的时候，你会注意到这些模块出现在它自己的文件中了：</p>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th style="text-align:right">Chuck Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bundle.main.js</td>
+<td style="text-align:right">main</td>
+</tr>
+<tr>
+<td>bundle.0.js</td>
+<td style="text-align:right">async-component</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong><em>你可以给动态导入的模块加一个名字，让它更容易识别；只需在文件名前面添加一个注释，就像我在上面的例子中所做的那样。</em></strong></p>
+<h3 id="动态组件加载"><a href="#动态组件加载" class="headerlink" title="动态组件加载"></a>动态组件加载</h3></blockquote>
+<p>&emsp;&emsp;因为 <em>import()</em> 返回一个Promise，我们可以将它和 <em>Vue</em> 的异步组件功能结合使用。Webpack将单独打包异步组件，并通过AJAX将其动态加载到应用程序中。</p>
+<p>  <strong>main.js</strong></p>
+<pre><code>
+import Vue from 'vue';
+
+Vue.component('async-component', (resolve) => {
+  import('./AsyncComponent.js')
+    .then((AsyncComponent) => {
+      resolve(AsyncComponent.default);
+    });
+});
+
+new Vue({ 
+  el: '#app' 
+});
+</code></pre>  
+
+<p>  <strong>index.html</strong></p>
+<pre><code>
+<div id="app">
+  <p>This part is included in the page load</p>
+  <async-component></async-component>
+</div>
+<script src="bundle.main.js"></script>
+</code></pre>    
+
+<p>  <strong>页面初始加载时：</strong></p>
+<pre><code>
+<div id="app">
+  <p>This part is included in the page load</p>
+</div>
+</code></pre>        
+
+<p>  当main.js运行的时候，它将启动异步组件模块的请求（这是自动实现的，因为 <em>webpack</em> 的 <em>import()</em> 包含了AJAX加载模块的代码）。<br>  如果Ajax成功返回模块，Promise 完成并且渲染组件，页面将会被渲染成这样：  </p>
+ <pre><code>
+<div id="app">
+  <p>This part is included in the page load</p>
+  <div>Async Component</div>
+</div>
+</code></pre>         
+**下图可以更好地帮助你理解：**  
+
+
+![image](https://d33wubrfki0l68.cloudfront.net/67be4bc46f37830bc390a151acb3fffe971062ec/eac15/images/posts/code_splitting_02.png)
+
+### single file component
+&emsp;&emsp;Vue 实现 *Code Splitting* 的特殊方式就是使用 *single file component*。下面是使用single file component的代码重构：
+
+**AsyncComponent.vue**  
+<pre><code>
+<template>
+  <div>Async Component</div>
+</template>
+<script>
+  export default {
+    props: [ 'myprop' ]
+  }
+</script>
+</code></pre>     
+
+<p><strong>导入的语法也更加简洁</strong></p>
+<pre><code>
+new Vue({ 
+  el: '#app',
+  components: {
+    AsyncComponent: () => import('./AsyncComponent.vue')
+  }
+});
+</code></pre>    
+
+<h3 id="Code-Splitting-架构"><a href="#Code-Splitting-架构" class="headerlink" title="Code Splitting 架构"></a>Code Splitting 架构</h3><p>&emsp;&emsp;这是无关技术的部分，问题就是我们怎么为一个app构建一个code splitting ？<br>&emsp;&emsp;最直接的方法就是按照界面来，比如，你的app上有两个界面，一个home，一个about。这两个界面是由两个组件（home.vue about.vue）构成，那么这两个组件就可以是拆分的点。<br>&emsp;&emsp;另外，你也可以对任何有条件的组件（选项卡、弹窗、下拉菜单等等）或者是footer进行拆分。</p>
+<blockquote>
+<p>原文地址：<a href="https://vuejsdevelopers.com/2017/07/03/vue-js-code-splitting-webpack/" target="_blank" rel="noopener">Code Splitting with Vue.js And Webpack</a><br>译者：<a href="http://www.damerwang.com">Damer Wang</a></p>
+</blockquote>
+
     
 
     
@@ -417,6 +597,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2017/12/09/page1/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -574,6 +762,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
