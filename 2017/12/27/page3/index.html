@@ -12,7 +12,7 @@
     
     <title>
         
-            归档: 2017/12 | 
+            Vue组件通信之Bus | 
         
         Damer 的博客
     </title>
@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Damer Wang">
     <meta name="description" itemprop="description" content="vue 前端学习 技术分享">
-    <meta name="keywords" content="vue 前端 api">
+    <meta name="keywords" content="vue 前端 api,vue.js vuex">
 
     <!-- Site Verification -->
     
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://www.damerwang.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2017/12 | Damer 的博客">
+    <meta property="og:title" content="Vue组件通信之Bus | Damer 的博客">
     <meta property="og:image" content="/img/favicon.png" />
     <meta property="og:description" content="vue 前端学习 技术分享">
-    
+    <meta property="og:article:tag" content="vue.js vuex"> 
 
+    
+        <meta property="article:published_time" content="12月 27, 2017" />
+        <meta property="article:modified_time" content="12月 27, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="归档: 2017/12 | Damer 的博客">
+    <meta name="twitter:title" content="Vue组件通信之Bus | Damer 的博客">
     <meta name="twitter:description" content="vue 前端学习 技术分享">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,13 +84,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://www.damerwang.com/archives/2017/12/index.html" />
+        <link rel="canonical" href="http://www.damerwang.com/2017/12/27/page3/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Damer 的博客",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Damer Wang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "生活不止眼前的苟且,还有未知的bug和看不懂的code"
+    },
+    "headline": "Vue组件通信之Bus",
+    "url": "http://www.damerwang.com/2017/12/27/page3/index.html",
+    "datePublished": "12月 27, 2017",
+    "dateModified": "12月 27, 2017",
+    "description": "vue 前端学习 技术分享",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://www.damerwang.com"
+    }
+}
+</script>
 
 
     
@@ -267,216 +300,261 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
     
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
         
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/12/27/page3/">Vue组件通信之Bus</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            关于组件通信我相信小伙伴们肯定也都很熟悉，就不多说了，对组件通信还不熟悉的小伙伴移步
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/12/27/page3/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/me.jpg" width="44px" height="44px" alt="Damer Wang's avatar">
-            </div>
-            <div>
-                <strong>Damer Wang</strong>
-                <span>12月 27, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/12/18/page2/">译：Code Splitting with Vue.js And Webpack</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            &emsp;&emsp;用webpack来打包你的单页应用的一个可能的缺点是你可能会得到一个非常大的打包文件，有时甚至会有几兆大小。 
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/12/18/page2/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/me.jpg" width="44px" height="44px" alt="Damer Wang's avatar">
-            </div>
-            <div>
-                <strong>Damer Wang</strong>
-                <span>12月 18, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/12/09/page1/">Damer-cli：帮你优化HTTP请求结构的脚手架</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
- 写在前面：最近一直在用 
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/12/09/page1/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/me.jpg" width="44px" height="44px" alt="Damer Wang's avatar">
-            </div>
-            <div>
-                <strong>Damer Wang</strong>
-                <span>12月 09, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Vue组件通信之Bus
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/me.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Damer Wang</strong>
+        <span>12月 27, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/vue-js-vuex/">vue.js vuex</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Vue组件通信之Bus&url=http://www.damerwang.com/2017/12/27/page3/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Damer 的博客&title=Vue组件通信之Bus&summary=vue 前端学习 技术分享&pics=http://www.damerwang.com/img/favicon.png&url=http://www.damerwang.com/2017/12/27/page3/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>关于组件通信我相信小伙伴们肯定也都很熟悉，就不多说了，对组件通信还不熟悉的小伙伴移步<a href="https://cn.vuejs.org/v2/guide/components.html" target="_blank" rel="noopener">这里</a>。<br>在vue2.0中 $dispatch 和 $broadcast 已经被弃用。官方文档中给出的解释是：  </p>
+<blockquote>
+<p>因为基于组件树结构的事件流方式实在是让人难以理解，并且在组件结构扩展的过程中会变得越来越脆弱。这种事件方式确实不太好，我们也不希望在以后让开发者们太痛苦。并且$dispatch 和 $broadcast 也没有解决兄弟组件间的通信问题。  </p>
+</blockquote>
+<p>官方推荐的状态管理方案是 <a href="https://github.com/vuejs/vuex" target="_blank" rel="noopener">Vuex</a>。不过如果项目不是很大，状态管理也没有很复杂的话，使用 <strong>Vuex</strong> 有种杀鸡用牛刀的感觉，当然，这也是要根据自己的需求来的，只是建议。  </p>
+<p>vue官方文档中有这样一个定义：<a href="https://cn.vuejs.org/v2/guide/components.html#%E9%9D%9E%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1" target="_blank" rel="noopener">非父子组件的通信</a>，内容很少，如下：<br><img src="https://user-gold-cdn.xitu.io/2017/12/27/16096fe025e1371b?w=700&amp;h=363&amp;f=png&amp;s=47717" alt="image">  </p>
+<p>其实关于这个<strong>非父子组件通信</strong>的demo还是有的，它藏在了<a href="https://cn.vuejs.org/v2/guide/migration.html#dispatch-%E5%92%8C-broadcast-%E6%9B%BF%E6%8D%A2" target="_blank" rel="noopener">$dispatch 和 $broadcast的迁移文档中</a>，有兴趣的小伙伴可以点击进去查看。文档中的建议就是：</p>
+<blockquote>
+<p><strong>对于$dispatch 和 $broadcast最简单的升级方式就是：通过使用事件中心，允许组件自由交流，无论组件处于组件树的哪一层。由于 Vue 实例实现了一个事件分发接口，你可以通过实例化一个空的 Vue 实例来实现这个目的。</strong> </p>
+</blockquote>
+<p>这个<strong>集中式的事件中间件</strong>就是 <strong>Bus</strong>。我习惯将bus定义到全局：  </p>
+<p>app.js<br> <pre><code><br>var eventBus = {<br>    install(Vue,options) {<br>        Vue.prototype.$bus = vue<br>    }<br>};<br>Vue.use(eventBus);<br> </code></pre>    </p>
+<p>然后在组件中，可以使用$emit， $on， $off 分别来分发、监听、取消监听事件：  </p>
+<p>分发事件的组件</p>
+ <pre><code>
+// ...
+methods: {
+  todo: function () {
+    this.$bus.$emit('todoSth', params);  //params是传递的参数
+    //...
+  }
+}
+ </code></pre>    
+
+<p>监听的组件</p>
+ <pre><code>
+// ...
+created() {
+  this.$bus.$on('todoSth', (params) => {  //获取传递的参数并进行操作
+      //todo something
+  })
+},
+// 最好在组件销毁前
+// 清除事件监听
+beforeDestroy () {
+  this.$bus.$off('todoSth');
+},
+ </code></pre>    
+
+<p>如果需要监听多个组件，只需要更改 <strong>bus</strong> 的 <strong>eventName</strong>:</p>
+ <pre><code>
+// ...
+created() {
+  this.$bus.$on('firstTodo', this.firstTodo);
+  this.$bus.$on('secondTodo', this.secondTodo);
+},
+// 清除事件监听
+beforeDestroy () {
+  this.$bus.$off('firstTodo', this.firstTodo);
+  this.$bus.$off('secondTodo', this.secondTodo);
+},
+ </code></pre>  
+
+<p>如果文章有错误或是有什么疑问，欢迎在评论中交流。</p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/12/18/page2/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
